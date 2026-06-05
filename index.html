@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe to Our Calendar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#1b4f9c;
+    --primary-dark:#163f7c;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --bg:#f7f9fc;
+    --card:#ffffff;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+}
+
+.hero{
+    background:white;
+    padding:80px 24px;
+    text-align:center;
+}
+
+.logo{
+    width:90px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(2rem,4vw,3.25rem);
+    margin-bottom:16px;
+}
+
+.hero p{
+    max-width:600px;
+    margin:auto;
+    color:var(--muted);
+    line-height:1.6;
+}
+
+.container{
+    max-width:700px;
+    margin:-40px auto 80px;
+    padding:0 24px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.card p{
+    text-align:center;
+    color:var(--muted);
+    margin-bottom:32px;
+}
+
+.button{
+    display:block;
+    text-decoration:none;
+    padding:18px;
+    border-radius:14px;
+    text-align:center;
+    font-weight:600;
+    transition:.2s;
+    margin-bottom:16px;
+}
+
+.button-primary{
+    background:var(--primary);
+    color:white;
+}
+
+.button-primary:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+.button-secondary{
+    background:#eef4ff;
+    color:var(--primary);
+}
+
+.button-secondary:hover{
+    background:#dde8ff;
+}
+
+.footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.9rem;
+    padding-bottom:40px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Stay Connected</h1>
+    <p>
+        Subscribe to the Western Heights calendar and receive all upcoming events
+        directly on your phone, tablet, or computer.
+    </p>
+</section>
+
+<div class="container">
+    <div class="card">
+
+        <h2>Add Calendar to Your Device</h2>
+
+        <p>
+            Select the option that matches your device.
+        </p>
+
+        <a
+        class="button button-primary"
+        href="webcal://calendar.google.com/calendar/ical/c_muj9im3rdvd6rh08obnofdsrps%40group.calendar.google.com/public/basic.ics">
+            🍎 Apple Calendar (iPhone & iPad)
+        </a>
+
+        <a
+        class="button button-secondary"
+        href="https://calendar.google.com/calendar/u/0?cid=Y19tdWo5aW0zcmR2ZDZyaDA4b2Jub2Zkc3Jwc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
+            🤖 Google Calendar (Android)
+        </a>
+
+    </div>
+</div>
+
+<div class="footer">
+    Western Heights • Albuquerque, New Mexico
+</div>
+
+</body>
+</html>
