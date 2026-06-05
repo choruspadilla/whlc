@@ -3,89 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subscribe to Our Calendar</title>
+
+<title>Calendar Subscription | Western Heights Learning Center</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
-    --primary:#1b4f9c;
-    --primary-dark:#163f7c;
-    --text:#1f2937;
+    --primary:#1f3f68;
+    --primary-dark:#16304f;
+    --primary-light:#edf3fa;
+    --text:#243142;
     --muted:#6b7280;
-    --bg:#f7f9fc;
-    --card:#ffffff;
+    --background:#f5f7fb;
+    --white:#ffffff;
 }
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
     font-family:'Inter',sans-serif;
-    background:var(--bg);
+    background:var(--background);
     color:var(--text);
-    min-height:100vh;
-}
-
-.hero{
-    background:white;
-    padding:80px 24px;
-    text-align:center;
-}
-
-.logo{
-    width:90px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:clamp(2rem,4vw,3.25rem);
-    margin-bottom:16px;
-}
-
-.hero p{
-    max-width:600px;
-    margin:auto;
-    color:var(--muted);
     line-height:1.6;
 }
 
+.hero{
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+    color:white;
+    text-align:center;
+    padding:80px 24px;
+}
+
+.logo{
+    max-width:220px;
+    margin-bottom:32px;
+}
+
+.hero h1{
+    font-size:clamp(2rem,5vw,3.5rem);
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:650px;
+    margin:0 auto;
+    font-size:1.1rem;
+    opacity:.92;
+}
+
 .container{
-    max-width:700px;
-    margin:-40px auto 80px;
+    max-width:800px;
+    margin:-60px auto 80px;
     padding:0 24px;
 }
 
 .card{
-    background:var(--card);
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    background:white;
+    border-radius:24px;
+    padding:48px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
 }
 
 .card h2{
     text-align:center;
-    margin-bottom:10px;
+    margin-bottom:12px;
+    color:var(--primary);
 }
 
 .card p{
     text-align:center;
     color:var(--muted);
-    margin-bottom:32px;
+    margin-bottom:36px;
 }
 
 .button{
     display:block;
+    width:100%;
+    text-align:center;
     text-decoration:none;
     padding:18px;
-    border-radius:14px;
-    text-align:center;
+    border-radius:12px;
     font-weight:600;
-    transition:.2s;
+    font-size:1rem;
+    transition:.2s ease;
     margin-bottom:16px;
 }
 
@@ -100,59 +114,112 @@ body{
 }
 
 .button-secondary{
-    background:#eef4ff;
+    background:var(--primary-light);
     color:var(--primary);
 }
 
 .button-secondary:hover{
-    background:#dde8ff;
+    transform:translateY(-2px);
+}
+
+.instructions{
+    margin-top:36px;
+    padding-top:32px;
+    border-top:1px solid #e5e7eb;
+}
+
+.instructions h3{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.instructions p{
+    text-align:left;
+    margin-bottom:0;
 }
 
 .footer{
     text-align:center;
     color:var(--muted);
+    padding:0 24px 48px;
     font-size:.9rem;
-    padding-bottom:40px;
 }
+
+@media (max-width:768px){
+
+    .card{
+        padding:32px 24px;
+    }
+
+    .hero{
+        padding:60px 24px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <section class="hero">
-    <h1>Stay Connected</h1>
+
+    <!-- Replace logo.png with your uploaded logo file -->
+    <img src="logo.png"
+         alt="Western Heights Learning Center"
+         class="logo">
+
+    <h1>School Calendar</h1>
+
     <p>
-        Subscribe to the Western Heights calendar and receive all upcoming events
-        directly on your phone, tablet, or computer.
+        Subscribe to the Western Heights Learning Center calendar to receive updates,
+        school events, holidays, and important dates automatically on your device.
     </p>
+
 </section>
 
 <div class="container">
+
     <div class="card">
 
         <h2>Add Calendar to Your Device</h2>
 
         <p>
-            Select the option that matches your device.
+            Choose the calendar option that matches your device.
         </p>
 
-        <a
-        class="button button-primary"
-        href="webcal://calendar.google.com/calendar/ical/c_muj9im3rdvd6rh08obnofdsrps%40group.calendar.google.com/public/basic.ics">
-            🍎 Apple Calendar (iPhone & iPad)
+        <a class="button button-primary"
+           href="webcal://calendar.google.com/calendar/ical/c_muj9im3rdvd6rh08obnofdsrps%40group.calendar.google.com/public/basic.ics">
+
+            Apple Calendar (iPhone & iPad)
+
         </a>
 
-        <a
-        class="button button-secondary"
-        href="https://calendar.google.com/calendar/u/0?cid=Y19tdWo5aW0zcmR2ZDZyaDA4b2Jub2Zkc3Jwc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
-            🤖 Google Calendar (Android)
+        <a class="button button-secondary"
+           href="https://calendar.google.com/calendar/u/0?cid=Y19tdWo5aW0zcmR2ZDZyaDA4b2Jub2Zkc3Jwc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
+
+            Google Calendar (Android)
+
         </a>
+
+        <div class="instructions">
+
+            <h3>Need Help?</h3>
+
+            <p>
+                If your device does not automatically open the calendar subscription,
+                tap the appropriate button above and follow the prompts provided by
+                your calendar application.
+            </p>
+
+        </div>
 
     </div>
+
 </div>
 
 <div class="footer">
-    Western Heights • Albuquerque, New Mexico
+    Western Heights Learning Center • Albuquerque, New Mexico
 </div>
 
 </body>
