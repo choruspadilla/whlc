@@ -4,22 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calendar Subscription | Western Heights Learning Center</title>
+<title>Western Heights Learning Center Calendar</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --primary:#1f3f68;
-    --primary-dark:#16304f;
-    --primary-light:#edf3fa;
-    --text:#243142;
-    --muted:#6b7280;
-    --background:#f5f7fb;
-    --white:#ffffff;
+    --purple:#4D2667;
+    --purple-dark:#3A1C4E;
+    --purple-light:#F5F0F8;
+    --text:#2F2F39;
+    --muted:#6B7280;
+    --bg:#F8F8FA;
 }
 
 *{
@@ -29,62 +28,68 @@
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:var(--background);
+    font-family:Inter,sans-serif;
+    background:var(--bg);
     color:var(--text);
-    line-height:1.6;
 }
 
 .hero{
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--primary-dark)
-    );
+    background:var(--purple);
     color:white;
+    padding:70px 24px 130px;
     text-align:center;
-    padding:80px 24px;
 }
 
 .logo{
-    max-width:220px;
+    max-width:180px;
+    width:100%;
     margin-bottom:32px;
 }
 
-.hero h1{
-    font-size:clamp(2rem,5vw,3.5rem);
+.logo-fallback{
+    display:inline-block;
+    font-size:20px;
     font-weight:700;
-    margin-bottom:12px;
+    letter-spacing:.08em;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:clamp(2.3rem,6vw,4rem);
+    line-height:1.05;
+    margin-bottom:18px;
 }
 
 .hero p{
-    max-width:650px;
-    margin:0 auto;
-    font-size:1.1rem;
-    opacity:.92;
+    max-width:720px;
+    margin:auto;
+    font-size:1.15rem;
+    line-height:1.7;
+    opacity:.95;
 }
 
 .container{
-    max-width:800px;
-    margin:-60px auto 80px;
+    max-width:900px;
+    margin:-70px auto 80px;
     padding:0 24px;
 }
 
 .card{
     background:white;
-    border-radius:24px;
-    padding:48px;
+    border-radius:28px;
+    padding:50px;
     box-shadow:
-        0 10px 30px rgba(0,0,0,.08);
+        0 20px 50px rgba(0,0,0,.08);
 }
 
 .card h2{
     text-align:center;
+    color:var(--purple);
+    font-size:2rem;
     margin-bottom:12px;
-    color:var(--primary);
 }
 
-.card p{
+.card-subtitle{
     text-align:center;
     color:var(--muted);
     margin-bottom:36px;
@@ -92,67 +97,67 @@ body{
 
 .button{
     display:block;
-    width:100%;
-    text-align:center;
     text-decoration:none;
-    padding:18px;
-    border-radius:12px;
+    text-align:center;
+    padding:20px;
+    border-radius:14px;
+    font-size:1.1rem;
     font-weight:600;
-    font-size:1rem;
-    transition:.2s ease;
-    margin-bottom:16px;
+    transition:.2s;
+    margin-bottom:18px;
 }
 
-.button-primary{
-    background:var(--primary);
+.apple{
+    background:var(--purple);
     color:white;
 }
 
-.button-primary:hover{
-    background:var(--primary-dark);
+.apple:hover{
+    background:var(--purple-dark);
     transform:translateY(-2px);
 }
 
-.button-secondary{
-    background:var(--primary-light);
-    color:var(--primary);
+.google{
+    background:var(--purple-light);
+    color:var(--purple);
+    border:2px solid #E7DDF0;
 }
 
-.button-secondary:hover{
+.google:hover{
     transform:translateY(-2px);
 }
 
-.instructions{
-    margin-top:36px;
-    padding-top:32px;
-    border-top:1px solid #e5e7eb;
+.help{
+    border-top:1px solid #EAEAEA;
+    margin-top:40px;
+    padding-top:36px;
 }
 
-.instructions h3{
-    color:var(--primary);
-    margin-bottom:12px;
+.help h3{
+    color:var(--purple);
+    margin-bottom:16px;
+    font-size:1.5rem;
 }
 
-.instructions p{
-    text-align:left;
-    margin-bottom:0;
+.help p{
+    color:var(--muted);
+    line-height:1.8;
 }
 
 .footer{
     text-align:center;
     color:var(--muted);
-    padding:0 24px 48px;
-    font-size:.9rem;
+    padding:0 20px 50px;
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
+
+    .hero{
+        padding:60px 20px 110px;
+    }
 
     .card{
         padding:32px 24px;
-    }
-
-    .hero{
-        padding:60px 24px;
     }
 
 }
@@ -164,16 +169,19 @@ body{
 
 <section class="hero">
 
-    <!-- Replace logo.png with your uploaded logo file -->
-    <img src="logo.png"
-         alt="Western Heights Learning Center"
-         class="logo">
+    <!-- Replace with actual logo file if available -->
+    <!-- <img src="logo.png" class="logo" alt="Western Heights Learning Center"> -->
+
+    <div class="logo-fallback">
+        WESTERN HEIGHTS
+    </div>
 
     <h1>School Calendar</h1>
 
     <p>
-        Subscribe to the Western Heights Learning Center calendar to receive updates,
-        school events, holidays, and important dates automatically on your device.
+        Subscribe to the Western Heights Learning Center calendar
+        to receive school events, holidays, important dates,
+        and schedule updates automatically on your device.
     </p>
 
 </section>
@@ -182,34 +190,36 @@ body{
 
     <div class="card">
 
-        <h2>Add Calendar to Your Device</h2>
+        <h2>Subscribe to the Calendar</h2>
 
-        <p>
-            Choose the calendar option that matches your device.
+        <p class="card-subtitle">
+            Select the option that matches your device.
         </p>
 
-        <a class="button button-primary"
-           href="webcal://calendar.google.com/calendar/ical/c_muj9im3rdvd6rh08obnofdsrps%40group.calendar.google.com/public/basic.ics">
+        <a
+            class="button apple"
+            href="webcal://calendar.google.com/calendar/ical/c_muj9im3rdvd6rh08obnofdsrps%40group.calendar.google.com/public/basic.ics">
 
             Apple Calendar (iPhone & iPad)
 
         </a>
 
-        <a class="button button-secondary"
-           href="https://calendar.google.com/calendar/u/0?cid=Y19tdWo5aW0zcmR2ZDZyaDA4b2Jub2Zkc3Jwc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
+        <a
+            class="button google"
+            href="https://calendar.google.com/calendar/u/0?cid=Y19tdWo5aW0zcmR2ZDZyaDA4b2Jub2Zkc3Jwc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
 
             Google Calendar (Android)
 
         </a>
 
-        <div class="instructions">
+        <div class="help">
 
             <h3>Need Help?</h3>
 
             <p>
-                If your device does not automatically open the calendar subscription,
-                tap the appropriate button above and follow the prompts provided by
-                your calendar application.
+                If the calendar does not open automatically, select the
+                appropriate option above and follow the prompts provided
+                by your calendar application.
             </p>
 
         </div>
