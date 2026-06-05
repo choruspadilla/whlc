@@ -15,10 +15,10 @@
 :root{
     --primary:#4D2667;
     --primary-dark:#3B1D50;
-    --primary-light:#F4EFF7;
+    --primary-light:#F5EFF8;
     --text:#2F2F39;
     --muted:#6B7280;
-    --bg:#F7F7FA;
+    --background:#F8F8FB;
     --white:#FFFFFF;
 }
 
@@ -28,9 +28,13 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Inter',sans-serif;
-    background:var(--bg);
+    background:var(--background);
     color:var(--text);
     min-height:100vh;
 }
@@ -39,7 +43,7 @@ body{
     background:linear-gradient(
         135deg,
         #4D2667 0%,
-        #5A2E78 100%
+        #6A368D 100%
     );
     color:white;
     text-align:center;
@@ -47,22 +51,23 @@ body{
 }
 
 .logo{
-    width:220px;
-    max-width:80%;
-    margin-bottom:40px;
+    width:130px;
+    height:auto;
+    display:block;
+    margin:0 auto 30px;
 }
 
 .hero h1{
     font-size:clamp(2.5rem,6vw,4.5rem);
+    line-height:1.05;
     font-weight:800;
-    letter-spacing:-0.03em;
     margin-bottom:18px;
 }
 
 .hero p{
-    max-width:760px;
-    margin:auto;
-    font-size:1.15rem;
+    max-width:700px;
+    margin:0 auto;
+    font-size:1.1rem;
     line-height:1.8;
     opacity:.95;
 }
@@ -76,7 +81,7 @@ body{
 .card{
     background:white;
     border-radius:28px;
-    padding:56px;
+    padding:50px;
     box-shadow:
         0 25px 60px rgba(0,0,0,.08);
 }
@@ -92,55 +97,41 @@ body{
     text-align:center;
     color:var(--muted);
     margin-bottom:40px;
-    font-size:1.05rem;
+    line-height:1.7;
 }
 
-.button{
+.subscribe-btn{
     display:block;
     width:100%;
     text-align:center;
     text-decoration:none;
-    padding:20px;
-    border-radius:14px;
-    font-size:1.05rem;
-    font-weight:700;
-    transition:.2s ease;
-    margin-bottom:18px;
-}
-
-.apple{
     background:var(--primary);
     color:white;
+    padding:20px;
+    border-radius:14px;
+    font-size:1.1rem;
+    font-weight:700;
+    transition:.2s ease;
 }
 
-.apple:hover{
+.subscribe-btn:hover{
     background:var(--primary-dark);
     transform:translateY(-2px);
 }
 
-.google{
-    background:var(--primary-light);
-    color:var(--primary);
-    border:2px solid #E5DCEF;
-}
-
-.google:hover{
-    transform:translateY(-2px);
-}
-
-.help{
+.info{
     margin-top:40px;
-    padding-top:36px;
+    padding-top:35px;
     border-top:1px solid #ECECEC;
 }
 
-.help h3{
+.info h3{
     color:var(--primary);
     margin-bottom:14px;
-    font-size:1.5rem;
+    font-size:1.3rem;
 }
 
-.help p{
+.info p{
     color:var(--muted);
     line-height:1.8;
 }
@@ -148,27 +139,31 @@ body{
 .footer{
     text-align:center;
     color:var(--muted);
-    font-size:.95rem;
+    font-size:.9rem;
     padding:0 24px 50px;
 }
 
 @media (max-width:768px){
 
     .hero{
-        padding:50px 24px 120px;
-    }
-
-    .logo{
-        width:180px;
-        margin-bottom:30px;
-    }
-
-    .card{
-        padding:36px 24px;
+        padding:50px 20px 120px;
     }
 
     .hero p{
         font-size:1rem;
+    }
+
+    .card{
+        padding:32px 24px;
+    }
+
+    .container{
+        padding:0 16px;
+    }
+
+    .subscribe-btn{
+        font-size:1rem;
+        padding:18px;
     }
 }
 
@@ -180,16 +175,16 @@ body{
 <section class="hero">
 
     <img
-        src="https://static.wixstatic.com/media/cb0219_90804cd7f31c403ab0e4fbb50d076690~mv2.png/v1/crop/x_154,y_769,w_1863,h_646/fill/w_502,h_174,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cb0219_90804cd7f31c403ab0e4fbb50d076690~mv2.png"
+        src="https://static.wixstatic.com/media/cb0219_a01ebdaf8320443cb8cad18ac21eee46~mv2.png/v1/fill/w_454,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cb0219_a01ebdaf8320443cb8cad18ac21eee46~mv2.png"
         alt="Western Heights Learning Center"
         class="logo">
 
     <h1>School Calendar</h1>
 
     <p>
-        Stay connected with school events, holidays, early dismissals,
-        special programs, and important announcements by subscribing
-        to the Western Heights Learning Center calendar.
+        Stay connected with school events, holidays, special programs,
+        early dismissals, and important announcements by subscribing to
+        the Western Heights Learning Center calendar.
     </p>
 
 </section>
@@ -201,33 +196,26 @@ body{
         <h2>Subscribe to the Calendar</h2>
 
         <p class="subtitle">
-            Select the option that matches your device.
+            Tap the button below and we'll automatically direct you
+            to the correct calendar subscription option for your device.
         </p>
 
         <a
-            class="button apple"
-            href="webcal://calendar.google.com/calendar/ical/c_muj9im3rdvd6rh08obnofdsrps%40group.calendar.google.com/public/basic.ics">
-
-            Apple Calendar (iPhone &amp; iPad)
-
+            href="#"
+            id="subscribeBtn"
+            class="subscribe-btn">
+            Subscribe to School Calendar
         </a>
 
-        <a
-            class="button google"
-            href="https://calendar.google.com/calendar/u/0?cid=Y19tdWo5aW0zcmR2ZDZyaDA4b2Jub2Zkc3Jwc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">
-
-            Google Calendar (Android)
-
-        </a>
-
-        <div class="help">
+        <div class="info">
 
             <h3>Need Help?</h3>
 
             <p>
-                If the calendar does not open automatically, select the
-                appropriate option above and follow the instructions
-                provided by your device's calendar application.
+                If your calendar app does not open automatically,
+                follow the prompts provided by your device or browser.
+                The calendar will stay updated automatically whenever
+                school events are added or changed.
             </p>
 
         </div>
@@ -239,6 +227,28 @@ body{
 <div class="footer">
     Western Heights Learning Center • Albuquerque, New Mexico
 </div>
+
+<script>
+
+const isiOS =
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+const subscribeBtn =
+    document.getElementById("subscribeBtn");
+
+if (isiOS) {
+
+    subscribeBtn.href =
+    "webcal://calendar.google.com/calendar/ical/c_muj9im3rdvd6rh08obnofdsrps%40group.calendar.google.com/public/basic.ics";
+
+} else {
+
+    subscribeBtn.href =
+    "https://calendar.google.com/calendar/u/0?cid=Y19tdWo5aW0zcmR2ZDZyaDA4b2Jub2Zkc3Jwc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t";
+
+}
+
+</script>
 
 </body>
 </html>
